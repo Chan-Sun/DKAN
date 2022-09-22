@@ -81,8 +81,8 @@ CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_test.sh \
 ### Comparison
 
 ![](./resources/results.png)
+![](./resources/visualization.png)
 
-<img src="./resources/visualization.png" title="" alt="" width="594">
 
 ### Citation
 
