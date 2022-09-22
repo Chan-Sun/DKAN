@@ -1,0 +1,10 @@
+pitted_surface_245
+patches_50
+patches_207
+patches_260
+patches_249
+patches_44
+patches_164
+pitted_surface_170
+patches_58
+crazing_112
