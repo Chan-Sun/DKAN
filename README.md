@@ -4,7 +4,7 @@ This is the Pytorch inplementation of our paper:
 
 **A New Knowledge Distillation Network for Incremental Few-Shot Surface Defect Detection** Chen Sun, Liang Gao, Xinyu Li and Yiping Gao  [[arxiv]](https://arxiv.org/abs/2209.00519) 
 
-![](\resources\framework.png)
+![](./resources/framework.png)
 
 ### Abstract
 
