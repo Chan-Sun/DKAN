@@ -6,7 +6,7 @@ import os.path as osp
 import time
 import warnings
 import sys
-sys.path.append("/home/sunchen/Projects/KDTFA")
+sys.path.append("../dkan")
 import cv2
 import mmcv
 import torch
@@ -16,9 +16,9 @@ from mmcv.utils import get_git_hash
 from mmdet.utils import collect_env
 import mmfewshot  # noqa: F401, F403
 from mmfewshot import __version__
-from kdtfa.train_mmfew import train_fewshot_detector
+from dkan.train_mmfew import train_fewshot_detector
 # from mmfewshot.detection.datasets import build_dataset
-from kdtfa.dataset.data_builder import build_dataset,build_dataloader
+from dkan.dataset.data_builder import build_dataset,build_dataloader
 from mmfewshot.detection.models import build_detector
 from mmfewshot.utils import get_root_logger
 # disable multithreading to avoid system being overloaded

@@ -1,7 +1,9 @@
 import argparse
 import os
 import sys
-sys.path.append("/home/user/sun_chen/Projects/KDTFA/")
+current_path = os.path.dirname(os.path.abspath(__file__))
+os.chdir("../../"+current_path)
+sys.path.append("../../"+current_path)
 
 import matplotlib.pyplot as plt
 import mmcv

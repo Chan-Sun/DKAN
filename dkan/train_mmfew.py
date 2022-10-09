@@ -15,8 +15,8 @@ from mmdet.core import DistEvalHook, EvalHook
 from mmfewshot.detection.core import (QuerySupportDistEvalHook,
                                       QuerySupportEvalHook)
 # from mmfewshot.detection.datasets import (build_dataloader, build_dataset)
-from kdtfa.dataset.data_builder import build_dataset,build_dataloader
-from kdtfa.runner import IterBasedOverSamplerRunner
+from dkan.dataset.data_builder import build_dataset,build_dataloader
+from dkan.runner import IterBasedOverSamplerRunner
 from mmfewshot.utils import get_root_logger
 
 def get_copy_dataset_type(dataset_type: str) -> str:

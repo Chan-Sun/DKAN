@@ -6,14 +6,14 @@ except (ImportError, ModuleNotFoundError):
 
 if mmdet is None:
     raise RuntimeError('mmdet is not installed')
-import sys
-sys.path.append("/home/sunchen/Projects/KDTFA")
+
 import argparse
 import copy
 import os
 import sys
-os.chdir("/home/sunchen/Projects/KDTFA")
-sys.path.append("/home/sunchen/Projects/KDTFA")
+current_path = os.path.dirname(os.path.abspath(__file__))
+os.chdir("../"+current_path)
+sys.path.append("../"+current_path)
 import os.path as osp
 import time
 import warnings
@@ -32,9 +32,9 @@ from mmrazor.utils import setup_multi_processes
 
 from mmfewshot.detection.models import build_detector
 # from mmfewshot.detection.datasets import build_dataset
-from kdtfa.dataset.data_builder import build_dataset,build_dataloader
+from dkan.dataset.data_builder import build_dataset,build_dataloader
 
-from kdtfa import train_kd_detector,set_random_seed
+from dkan import train_kd_detector,set_random_seed
 
 def parse_args():
     parser = argparse.ArgumentParser(description='Train a detector')

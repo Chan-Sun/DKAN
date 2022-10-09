@@ -13,7 +13,7 @@ from mmcv.runner import (get_dist_info, init_dist, load_checkpoint,
 # from mmfewshot.detection.datasets import (build_dataloader, build_dataset,
 #                                           get_copy_dataset_type)
 from mmfewshot.detection.models import build_detector
-from kdtfa.dataset.data_builder import build_dataset,build_dataloader,get_copy_dataset_type
+from dkan.dataset.data_builder import build_dataset,build_dataloader,get_copy_dataset_type
 
 def parse_args():
     parser = argparse.ArgumentParser(

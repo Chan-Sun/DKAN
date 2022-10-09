@@ -19,7 +19,7 @@ from mmfewshot.utils.infinite_sampler import (DistributedInfiniteGroupSampler,
                                               InfiniteGroupSampler)
 from mmfewshot.detection.datasets.dataset_wrappers import (NWayKShotDataset, QueryAwareDataset,
                                TwoBranchDataset)
-from kdtfa.dataset.wrapper import MultiStageBaseDataset
+from dkan.dataset.wrapper import MultiStageBaseDataset
 
 def get_copy_dataset_type(dataset_type: str) -> str:
     """Return corresponding copy dataset type."""

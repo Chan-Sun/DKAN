@@ -1,8 +1,10 @@
 # Copyright (c) OpenMMLab. All rights reserved.
 import argparse
-import os.path as osp
+import os
 import sys
-sys.path.append("/home/user/sun_chen/Projects/KDTFA/")
+current_path = os.path.dirname(os.path.abspath(__file__))
+os.chdir("../../"+current_path)
+sys.path.append("../../"+current_path)
 import mmcv
 import numpy as np
 from mmcv import Config, DictAction

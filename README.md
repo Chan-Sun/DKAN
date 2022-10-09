@@ -58,17 +58,32 @@ dataset
 └── images
 ```
 
-### Train
+### Single-GPU Train
+```
+python ./tools/train.py \
+    ./configs/distill/split_1/dkan_5shot_fine_tuning.py \
+    --work-dir ./work_dir
+    --gpu-ids 0
+```
 
+### Multi-GPU Train
 ```
 CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_train.sh \
     ./configs/distill/split_1/dkan_5shot_fine_tuning.py \
     2 \
     --work-dir ./work_dir
 ```
+### Single-GPU Test
+```
+python ./tools/test.py \
+    ./configs/distill/split_1/dkan_5shot_fine_tuning.py \
+    ./work_dir/$YOU_CHECKPOINT_PATH
+    --gpu-ids 0 \
+    --work-dir ./work_dir \
+    --eval_only
+```
 
-### Test
-
+### Multi-GPU Test
 ```
 CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_test.sh \
     ./configs/distill/split_1/dkan_5shot_fine_tuning.py \
@@ -76,8 +91,7 @@ CUDA_VISIBLE_DEVICES=0,1 bash ./tools/dist_test.sh \
     2 \
     --work-dir ./work_dir \
     --eval_only
-```
-
+``` 
 ### Comparison
 
 ![](./resources/results.png)

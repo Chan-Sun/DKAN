@@ -8,13 +8,13 @@ import torch
 from mmcv.parallel import MMDataParallel, MMDistributedDataParallel
 from mmcv.runner import (HOOKS, EpochBasedRunner, Fp16OptimizerHook,IterBasedRunner,
                          OptimizerHook, build_runner)
-from kdtfa.runner import IterBasedOverSamplerRunner
+from dkan.runner import IterBasedOverSamplerRunner
 from mmcv.utils import build_from_cfg
 from mmdet.core import DistEvalHook, EvalHook
 
 from mmdet.datasets import replace_ImageToTensor
 
-from kdtfa.dataset.data_builder import build_dataset,build_dataloader
+from dkan.dataset.data_builder import build_dataset,build_dataloader
 from mmfewshot.utils import get_root_logger
 
 from mmrazor.core.distributed_wrapper import DistributedDataParallelWrapper

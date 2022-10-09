@@ -19,12 +19,14 @@ from mmcv.cnn import fuse_conv_bn
 from mmcv.parallel import MMDataParallel, MMDistributedDataParallel
 from mmcv.runner import (get_dist_info, init_dist, load_checkpoint,
                          wrap_fp16_model)
-
+current_path = os.path.dirname(os.path.abspath(__file__))
+os.chdir("../"+current_path)
+sys.path.append("../"+current_path)
 from mmdet.apis import multi_gpu_test, single_gpu_test
 from mmdet.datasets import replace_ImageToTensor
 # from mmfewshot.detection.datasets import (build_dataloader, build_dataset,
 #                                           get_copy_dataset_type)
-from kdtfa.dataset.data_builder import build_dataset,build_dataloader
+from dkan.dataset.data_builder import build_dataset,build_dataloader
 
 from mmrazor.models.builder import build_algorithm
 

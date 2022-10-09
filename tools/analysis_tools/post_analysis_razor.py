@@ -10,11 +10,13 @@ from mmcv.runner import (get_dist_info, load_checkpoint,
 from mmdet.datasets import replace_ImageToTensor
 from mmrazor.models import build_algorithm
 from mmdet.utils import setup_multi_processes
-import sys
 import pickle
-sys.path.append("/home/sunchen/Projects/KDTFA")
-os.chdir("/home/sunchen/Projects/KDTFA")
-from kdtfa.dataset.data_builder import build_dataloader, build_dataset,get_copy_dataset_type
+import os
+import sys
+current_path = os.path.dirname(os.path.abspath(__file__))
+os.chdir("../../"+current_path)
+sys.path.append("../../"+current_path)
+from dkan.dataset.data_builder import build_dataloader, build_dataset,get_copy_dataset_type
 from analyze_results import ResultVisualizer,bbox_map_eval
 from mmdet.datasets import get_loading_pipeline
 
